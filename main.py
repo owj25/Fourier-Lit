@@ -53,7 +53,7 @@ def fourier_analysis(data):
     return list(zip(frequencies, magnitudes))  # Return (freq, magnitude) pairs
 
 
-with open("/Users/student/Desktop/TWLunformatted.txt", "r", encoding="utf-8") as file:
+with open("/path/poem.txt", "r", encoding="utf-8") as file:
     poem_text = file.read()
 
 # Analyze the poem
@@ -76,7 +76,7 @@ letter_spectrum = fourier_analysis(letters)
 visual_spectrum = fourier_analysis(length)
 syllable_spectrum = fourier_analysis(sylls)
 
-with open("TWL_fourier_results.txt", "w") as file:
+with open("Fouruer_result.txt", "w") as file:
     file.write("Frequency Spectrum Data:\n\n")
 
     def save_spectrum(name, spectrum):
@@ -90,5 +90,5 @@ with open("TWL_fourier_results.txt", "w") as file:
     save_spectrum("Visual Length", visual_spectrum)
     save_spectrum("Syllable Count", syllable_spectrum)
 
-print("Fourier data saved to fourier_results.txt")
+print("Fourier data saved to Fourier_result.txt")
 
